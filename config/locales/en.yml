@@ -1,0 +1,14 @@
+---
+en:
+  featured_pages: 
+    title: Featured Pages
+    sets_list: Featured Pages Sets
+    empty: Create your first set by clicking button on the bottom
+    new: New set of featured pages
+    set:
+      new: New set of featured pages
+      edit: Edit page set
+      name: Name
+      remove_title: Remove featured pages set
+      remove_warning: Are you sure you want to <strong class="warning">permanently remove</strong> the following page set?
+    

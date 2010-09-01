@@ -1,0 +1,13 @@
+%h1= t 'featured_pages.set.remove_title'
+%p= t 'featured_pages.set.remove_warning'
+
+.inset
+  %table.index
+    %tbody
+      = @featured_pages_set.name
+
+- form_for [:admin, @featured_pages_set], :html => {:method => :delete, 'data-onsubmit_status'=>"Removing set&#8230;"} do
+  %p.buttons
+    %input.button{:type=>"submit", :value => t('remove') }/
+    = t('or')
+    =link_to t('cancel'), admin_featured_pages_sets_url

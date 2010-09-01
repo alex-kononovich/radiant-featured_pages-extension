@@ -1,0 +1,11 @@
+- form_for [:admin, @featured_pages_set], :html => {:id => 'new_set', 'data-onsubmit_status'=>"Saving set&#8230;"} do |f|
+  .form_area
+    %p.title
+      %label{:for=>"featured_pages_set_name"}= t('featured_pages.set.name')
+      =f.text_field :name, :class => 'textbox', :maxlength => 255
+      
+  %p.buttons
+    = save_model_button @featured_pages_set
+    = save_model_and_continue_editing_button @featured_pages_set
+    or
+    = link_to t('cancel'), admin_featured_pages_sets_url

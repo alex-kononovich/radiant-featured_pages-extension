@@ -1,0 +1,27 @@
+- @page_title = t('featured_pages.title') + ' - ' + default_page_title
+
+.outset
+  %table{ :class => 'index', :cellpadding => '0', :cellspacing => '0', :border => '0'}
+    %thead
+      %tr
+        %th.asset= t('featured_pages.sets_list')
+        %th.modify= t('modify')
+    %tbody
+      - unless @featured_pages_sets.empty?
+        - for set in @featured_pages_sets 
+          %tr.node.level-0
+            %td.set
+              = link_to set.name, edit_admin_featured_pages_set_url(set)
+            %td.remove
+              = link_to t('remove'), remove_admin_featured_pages_set_path(set)
+      - else
+        %tr
+          %td.note{ :colspan => 2 } 
+            = t('featured_pages.empty')
+    %tfoot
+      %tr
+        %td{:colspan => 2} Featured page sets can be inserted into pages, snippets and layouts. Click on a featured page set name below to edit it or click <code>Remove</code> to delete it.
+  
+  #actions
+    %ul
+      %li= link_to((image('plus', :alt => '') + ' ' + t('featured_pages.new')), new_admin_featured_pages_set_path)
