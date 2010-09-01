@@ -4,7 +4,7 @@
 class FeaturedPagesExtension < Radiant::Extension
   version "1.0"
   description "Create collection of featured pages"
-  url ""
+  url "http://github.com/flskif/radiant-featured_pages-extension"
   
   # extension_config do |config|
   #   config.gem 'some-awesome-gem
