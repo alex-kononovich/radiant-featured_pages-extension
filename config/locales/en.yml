@@ -5,6 +5,7 @@ en:
     sets_list: Featured Pages Sets
     empty: Create your first set by clicking button on the bottom
     new: New set of featured pages
+    page_appears_in: 'Page should appears in those featured sets:'
     set:
       new: New set of featured pages
       edit: Edit page set

@@ -1,3 +1,11 @@
 - unless @featured_sets.empty?
-  - @featured_sets.each do |set|
-    = set.name
+  .set.featured
+    %label= t 'featured_pages.page_appears_in'
+    - page_sets = @page.featured_pages_set_ids
+    %ul
+      - @featured_sets.each do |set|
+        - checkbox_id = "featured_pages_set_#{set.id}"
+        %li
+          = check_box_tag 'page[featured_pages_set_ids][]', set.id, page_sets.include?(set.id), { :id => checkbox_id } 
+          = label_tag checkbox_id, set.name
+      

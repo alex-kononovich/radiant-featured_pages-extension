@@ -1,0 +1,15 @@
+.featured
+{
+  margin-top: 1em;
+  margin-bottom: 1.1em;
+}
+
+.featured ul
+{
+  margin-top: .5em;
+}
+
+.featured ul li
+{
+  font-size: .8em;
+}

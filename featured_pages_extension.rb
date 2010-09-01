@@ -26,6 +26,7 @@ class FeaturedPagesExtension < Radiant::Extension
 
     Page.class_eval { include FeaturedPages::PageExtension }
     Admin::PagesController.class_eval { include FeaturedPages::PagesControllerExtension }
+    Admin::PagesController.class_eval { include FeaturedPages::Interface }
     
   end
 end
