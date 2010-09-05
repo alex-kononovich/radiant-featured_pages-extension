@@ -25,6 +25,8 @@ class FeaturedPagesExtension < Radiant::Extension
     admin.page.edit.add :parts_bottom, 'featured_sets'
 
     Page.class_eval { include FeaturedPages::PageExtension }
+    Page.class_eval { include FeaturedPages::Tags }
+    
     Admin::PagesController.class_eval { include FeaturedPages::PagesControllerExtension }
     Admin::PagesController.class_eval { include FeaturedPages::Interface }
     

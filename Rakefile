@@ -3,9 +3,9 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "radiant-featured_pages-extension"
     gem.summary = %Q{Featured Pages Extension for Radiant CMS}
-    gem.description = %Q{Describe your extension here}
+    gem.description = %Q{Create collection of featured pages}
     gem.email = "flskif@gmail.com"
-    gem.homepage = "http://yourwebsite.com/featured_pages"
+    gem.homepage = "http://github.com/flskif/radiant-featured_pages-extension"
     gem.authors = ["Alex K"]
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
